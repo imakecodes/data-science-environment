@@ -1,0 +1,15 @@
+version: '3'
+services:
+    jupyter:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        stdin_open: true
+        tty: true
+        restart: always
+        env_file:
+            - environment.env
+        ports:
+            - 8888:8888
+        volumes:
+            - ./notebook:/notebook

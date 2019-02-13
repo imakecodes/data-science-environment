@@ -4,6 +4,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
+        container_name: jupyter
         stdin_open: true
         tty: true
         restart: always
